@@ -23,7 +23,7 @@ public class GrechPortals extends JavaPlugin {
             GrechAreas.getWorldAreaFactory(),
             portalsFactory
         );
-        configLoader.load();
+        configLoader.load(); // Will load portals on the portalsFactory.
 
         PlayerJoinAreaListener joinAreaListener = new PlayerJoinAreaListener(
             plugin,
