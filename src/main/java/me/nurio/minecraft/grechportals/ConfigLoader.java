@@ -24,9 +24,9 @@ public class ConfigLoader {
     private WorldPortalsFactory portalsFactory;
 
     public void load() {
-        var list = getPortals().stream()
+        getPortals().stream()
             .map(this::parse)
-            .collect(Collectors.toList());
+            .forEach(portalsFactory.getPortals()::add);
     }
 
     private List<File> getPortals() {
