@@ -2,6 +2,8 @@ package me.nurio.minecraft.grechportals;
 
 import lombok.AllArgsConstructor;
 import me.nurio.bukkit.configuration.files.GrechConfig;
+import me.nurio.minecraft.grechportals.portals.WorldPortal;
+import me.nurio.minecraft.grechportals.portals.WorldPortalsFactory;
 import me.nurio.minecraft.worldareas.areas.WorldArea;
 import me.nurio.minecraft.worldareas.areas.WorldAreaFactory;
 import org.bukkit.Location;

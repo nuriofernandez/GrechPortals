@@ -1,4 +1,4 @@
-package me.nurio.minecraft.grechportals;
+package me.nurio.minecraft.grechportals.portals;
 
 import lombok.Data;
 import lombok.RequiredArgsConstructor;

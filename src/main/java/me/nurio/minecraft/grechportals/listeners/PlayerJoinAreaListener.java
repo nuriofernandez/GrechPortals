@@ -1,6 +1,8 @@
-package me.nurio.minecraft.grechportals;
+package me.nurio.minecraft.grechportals.listeners;
 
 import lombok.RequiredArgsConstructor;
+import me.nurio.minecraft.grechportals.portals.WorldPortal;
+import me.nurio.minecraft.grechportals.portals.WorldPortalsFactory;
 import me.nurio.minecraft.worldareas.areas.WorldArea;
 import me.nurio.minecraft.worldareas.events.PlayerJoinAreaEvent;
 import org.bukkit.entity.Player;
