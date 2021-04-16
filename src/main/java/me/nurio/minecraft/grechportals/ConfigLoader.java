@@ -31,7 +31,10 @@ public class ConfigLoader {
 
     private List<File> getPortals() {
         File portalsFolder = new File(plugin.getDataFolder() + File.separator + "portals");
+        if (!portalsFolder.exists()) portalsFolder.mkdirs();
+
         return Arrays.stream(portalsFolder.listFiles())
+            .peek(f -> System.out.println("Reading file... '" + f.getName() + "'"))
             .filter(file -> file.getName().endsWith(".yml"))
             .collect(Collectors.toList());
     }
