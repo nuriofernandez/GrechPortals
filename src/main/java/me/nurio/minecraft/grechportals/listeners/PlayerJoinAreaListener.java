@@ -23,7 +23,7 @@ public class PlayerJoinAreaListener implements Listener {
         if (portal == null) return; // No portal linked to that area.
 
         Player player = event.getPlayer();
-        player.teleport(portal.getDestination());
+        portal.getActions().applyTo(player);
     }
 
 }

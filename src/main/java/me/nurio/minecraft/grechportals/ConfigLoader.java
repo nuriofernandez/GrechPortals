@@ -10,6 +10,7 @@ import org.bukkit.Location;
 import org.bukkit.plugin.Plugin;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
@@ -42,7 +43,14 @@ public class ConfigLoader {
     private WorldPortal parse(File file) {
         GrechConfig config = new GrechConfig(plugin, file);
         String worldAreaUniqueId = config.getConfig().getString("world-area-uuid");
-        Location destination = config.getLocation("destination");
+
+        Location teleportDestination = config.getConfig().isSet("actions.teleport")
+            ? config.getLocation("actions.teleport")
+            : null;
+
+        List<String> messages = config.getConfig().isSet("actions.messages")
+            ? config.getConfig().getStringList("actions.messages")
+            : new ArrayList<>();
 
         UUID uuid = UUID.fromString(worldAreaUniqueId);
         WorldArea area = areaFactory.getAreas().stream()
@@ -51,7 +59,8 @@ public class ConfigLoader {
 
         return new WorldPortal(
             area,
-            destination
+            teleportDestination,
+            messages
         );
     }
 
