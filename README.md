@@ -15,4 +15,9 @@ actions:
     z: -1
     yaw: 0
     pitch: 0
+  messages:
+    - "--------------------"
+    - "Teleporting &c{playername}&f to another place..."
+    - "--------------------"
+
 ```
