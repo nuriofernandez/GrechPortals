@@ -7,11 +7,12 @@ movement of portal areas.
 
 ```yml
 world-area-uuid: "74d41144-a2f0-422c-a25b-598745da6f3e"
-destination:
-  w: "world"
-  x: -1
-  y: 110
-  z: -1
-  yaw: 0
-  pitch: 0
+actions:
+  teleport:
+    w: "world"
+    x: -1
+    y: 110
+    z: -1
+    yaw: 0
+    pitch: 0
 ```
